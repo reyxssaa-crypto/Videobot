@@ -13,26 +13,30 @@
         }
         .header {
             background: #0a143a;
-            padding: 1.5rem;
+            padding: 1rem;
             text-align: center;
             font-weight: bold;
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
         .tabs {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 0 10px;
         }
         .tab-btn {
             background: #192c47;
             color: #b9d6f9;
             border: none;
-            border-radius: .5rem .5rem 0 0;
-            margin: 0 7px;
-            padding: 10px 24px;
+            border-radius: .4rem;
+            margin: 0 4px;
+            padding: 8px 16px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 0.9rem;
             outline:none;
+            display: inline-block;
         }
         .tab-btn.active {
             background: #2082c6;
@@ -45,66 +49,145 @@
         }
         .card {
             background: #21284a;
-            margin-bottom: 1.3rem;
-            padding: 1.2rem;
-            border-radius: 1rem;
+            margin-bottom: 1.2rem;
+            padding: 1rem;
+            border-radius: 0.8rem;
             box-shadow: 0 2px 8px rgba(33,40,74,0.16);
         }
         .card-title {
             color: #18a0f2;
-            font-size: 1.2rem;
-            margin-bottom: .4rem;
+            font-size: 1.1rem;
+            margin-bottom: .3rem;
         }
-        .card-video { width: 100%; border-radius: .8rem; margin-bottom: .7rem; max-height:300px; background:#000;}
-        .stats { color: #a3bdd7; font-size: .95rem; margin-bottom:.5rem;}
+        .card-video { 
+            width: 100%; 
+            border-radius: .6rem; 
+            margin-bottom: .6rem; 
+            max-height:280px; 
+            background:#000;
+        }
+        .stats { 
+            color: #a3bdd7; 
+            font-size: .9rem; 
+            margin-bottom:.5rem;
+        }
         .likebar {
-            display:inline-flex;
+            display:flex;
             gap:10px;
             align-items:center;
             margin-bottom: 10px;
+            flex-wrap: wrap;
         }
         .likebtn, .dislikebtn {
             border:none;
-            border-radius:6px;
+            border-radius:5px;
             padding:4px 10px;
-            font-size:1.2em;
+            font-size:1em;
             background:#182040;
             color:#77dbff;
             cursor:pointer;
             transition:.22s;
         }
-        .likebtn.liked, .dislikebtn.liked {background:#18a0f2;color:#fff;}
+        .likebtn.liked, .dislikebtn.liked {
+            background:#18a0f2;
+            color:#fff;
+        }
+        .comment-section {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #1a233a;
+        }
+        .comment-input {
+            width: 95%;
+            padding: 6px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        .comment-btn {
+            background: #1ec0ff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 12px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .comments-list {
+            margin-top: 8px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        .comment {
+            background: #192c47;
+            padding: 6px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #b9d6f9;
+        }
         .upload-btn {
             display: block;
             background: linear-gradient(90deg,#1479c9,#1ec0ff 100%);
             color: #fff;
             font-weight: bold;
             border: none;
-            border-radius: .7rem;
-            margin:24px auto 24px;
-            padding: 16px 32px;
-            font-size: 1.1rem;
+            border-radius: .6rem;
+            margin:15px auto;
+            padding: 12px 24px;
+            font-size: 1rem;
             cursor: pointer;
             box-shadow:0 2px 8px #1ec0ff44;
         }
-        .upldform { max-width:400px; margin:0 auto 2rem; padding:20px; background:#26335b; border-radius:12px;}
-        .upldform input, .upldform textarea {
-            width:96%;margin-bottom:14px;
-            padding:8px;
-            border:none;border-radius:7px;font-size:1em;
+        .upldform { 
+            max-width:400px; 
+            margin:0 auto 2rem; 
+            padding:15px; 
+            background:#26335b; 
+            border-radius:10px;
         }
-        .upldform label{font-size:.99em;}
+        .upldform input, .upldform textarea, .upldform select {
+            width:96%;
+            margin-bottom:10px;
+            padding:8px;
+            border:none;
+            border-radius:5px;
+            font-size:0.95em;
+        }
+        .upldform label{
+            font-size:0.9em;
+            color: #b9d6f9;
+        }
         .mode-switcher {
-            position: fixed; top: 10px; right: 10px;
-            background: #1a233a; color: #b9d6f9;
-            border: none; border-radius: .5rem; padding: .6rem 1.2rem;
-            cursor: pointer; font-size: 1rem;
+            position: fixed; 
+            top: 10px; 
+            right: 10px;
+            background: #1a233a; 
+            color: #b9d6f9;
+            border: none; 
+            border-radius: .4rem; 
+            padding: .5rem 1rem;
+            cursor: pointer; 
+            font-size: 0.85rem;
             box-shadow: 0 2px 8px rgba(33,40,74,0.15);
+        }
+        .admin-badge {
+            background: #ff6b00;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            margin-top: 5px;
+            display: inline-block;
         }
         @media (max-width: 700px) {
             .container {max-width:100vw;}
-            .card {padding:.7rem;}
-            .upldform {padding:12px;}
+            .card {padding:.8rem;}
+            .upldform {padding:10px;}
+            .header {font-size: 1.2rem; padding: 0.8rem;}
+            .tab-btn {padding: 6px 12px; font-size: 0.8rem;}
         }
     </style>
 </head>
@@ -114,25 +197,50 @@
     <div class="tabs">
         <button class="tab-btn active" id="tab-cinema" onclick="showTab('cinema')">Kino</button>
         <button class="tab-btn" id="tab-shorts" onclick="showTab('shorts')">Shorts</button>
-        <button class="tab-btn" id="tab-upload" onclick="showTab('upload')">Video yuklash</button>
-        <button class="tab-btn" id="tab-top" onclick="showTab('top')">TOP ko‘rilganlar</button>
+        <button class="tab-btn" id="tab-upload" onclick="showTab('upload')" style="display: none;" id="upload-tab">Yuklash</button>
+        <button class="tab-btn" id="tab-top" onclick="showTab('top')">TOP</button>
     </div>
     <div class="container" id="content"></div>
 
     <script>
+        // Admin ID — bu tokenni o'zingiznikiga o'zgartiring
+        const ADMIN_ID = "Samxoji";
+        let currentUser = localStorage.getItem("userId") || "user_" + Date.now();
+        localStorage.setItem("userId", currentUser);
+        let isAdmin = localStorage.getItem("isAdmin") === "true";
+
         // Demo uchun local data
         let videos = {
             "cinema": [
-                {id:1, title:"O'zbek filmi", url:"https://samplelib.com/mp4/sample-5s.mp4", views:120, likes:17, dislikes:2},
-                {id:2, title:"Komediya", url:"https://samplelib.com/mp4/sample-10s.mp4", views:88, likes:9, dislikes:1}
+                {id:1, title:"O'zbek filmi", url:"https://samplelib.com/mp4/sample-5s.mp4", views:120, likes:17, dislikes:2, comments:[{user:"User1", text:"Ajoyib film!"}]},
+                {id:2, title:"Komediya", url:"https://samplelib.com/mp4/sample-10s.mp4", views:88, likes:9, dislikes:1, comments:[]}
             ],
             "shorts": [
-                {id:3, title:"Qiziqarli short", url:"https://samplelib.com/mp4/sample-3s.mp4", views:44, likes:7, dislikes:0}
+                {id:3, title:"Qiziqarli short", url:"https://samplelib.com/mp4/sample-3s.mp4", views:44, likes:7, dislikes:0, comments:[]}
             ]
         };
 
         const getLikeStatus = (type, id) => localStorage.getItem(`like_${type}_${id}`) || "";
         const setLikeStatus = (type, id, val) => localStorage.setItem(`like_${type}_${id}`, val);
+
+        // Admin LOGIN
+        function checkAdmin() {
+            let pwd = prompt("Admin parolini kiriting:");
+            if (pwd === ADMIN_ID) {
+                isAdmin = true;
+                localStorage.setItem("isAdmin", "true");
+                document.getElementById("upload-tab").style.display = "inline-block";
+                alert("✅ Admin mode ON!");
+                location.reload();
+            } else {
+                alert("❌ Parol xato!");
+            }
+        }
+
+        // Ishga tushirish
+        if (isAdmin) {
+            document.getElementById("upload-tab").style.display = "inline-block";
+        }
 
         let darkBlue = true;
         function toggleMode() {
@@ -157,16 +265,32 @@
         }
 
         function renderList(type){
-            let html = `<button class="upload-btn" onclick="showTab('upload')">+ Video yuklash</button>`;
+            let html = ``;
+            if (isAdmin) {
+                html += `<button class="upload-btn" onclick="showTab('upload')">+ Video yuklash</button>`;
+            }
             videos[type].forEach(v=>{
                 html += `
                   <div class="card">
-                    <div class="card-title">${v.title}</div>
+                    <div class="card-title">${v.title}`;
+                if (isAdmin) html += ` <span class="admin-badge">ADMIN</span>`;
+                html += `</div>
                     <video class="card-video" controls src="${v.url}"></video>
-                    <div class="stats">${v.views} marta ko‘rilgan</div>
+                    <div class="stats">${v.views} marta ko'rilgan</div>
                     <div class="likebar">
                         <button class="likebtn ${getLikeStatus(type,v.id)=='like'?'liked':''}" onclick="likeVideo('${type}',${v.id})">👍 ${v.likes}</button>
                         <button class="dislikebtn ${getLikeStatus(type,v.id)=='dislike'?'liked':''}" onclick="dislikeVideo('${type}',${v.id})">👎 ${v.dislikes}</button>
+                    </div>
+                    <div class="comment-section">
+                        <input type="text" class="comment-input" id="comment_${v.id}" placeholder="Komment yozing...">
+                        <button class="comment-btn" onclick="addComment('${type}', ${v.id})">Yuborish</button>
+                        <div class="comments-list" id="comments_${v.id}">`;
+                if (v.comments && v.comments.length > 0) {
+                    v.comments.forEach(c => {
+                        html += `<div class="comment"><b>${c.user}</b>: ${c.text}</div>`;
+                    });
+                }
+                html += `</div>
                     </div>
                   </div>
                 `;
@@ -187,14 +311,28 @@
             showTab(type);
         }
 
+        function addComment(type, id) {
+            let txt = document.getElementById(`comment_${id}`).value;
+            if (!txt.trim()) return;
+            let v = videos[type].find(x=>x.id===id);
+            if (!v.comments) v.comments = [];
+            v.comments.push({user: currentUser, text: txt});
+            document.getElementById(`comment_${id}`).value = "";
+            showTab(type);
+        }
+
         function renderUpload() {
+            if (!isAdmin) {
+                document.getElementById('content').innerHTML = `<p style="text-align:center; color: red;">❌ Siz admin emassiz!</p>`;
+                return;
+            }
             let html = `
                 <form class="upldform" onsubmit="event.preventDefault();uploadVideo()">
                     <label>Video nomi:</label><br>
                     <input type="text" id="v_title" required><br>
                     <label>Video URL (mp4):</label><br>
                     <input type="url" id="v_url" required placeholder="https://...mp4"><br>
-                    <label>Bo‘lim:</label><br>
+                    <label>Bo'lim:</label><br>
                     <select id="v_type">
                         <option value="cinema">Kino</option>
                         <option value="shorts">Shorts</option>
@@ -209,25 +347,28 @@
             let t = document.getElementById('v_title').value;
             let u = document.getElementById('v_url').value;
             let tp = document.getElementById('v_type').value;
-            videos[tp].push({id: Date.now(), title:t, url:u, views:1, likes:0, dislikes:0});
+            videos[tp].push({id: Date.now(), title:t, url:u, views:1, likes:0, dislikes:0, comments:[]});
             alert("✅ Video yuklandi!");
             showTab(tp);
         }
 
         function renderTop() {
             let all = [...videos.cinema, ...videos.shorts].sort((a,b)=>b.views-a.views);
-            let html = `<h2 style="text-align:center;">TOP ko‘rilganlar</h2>`;
+            let html = `<h2 style="text-align:center; color: #18a0f2;">TOP ko'rilganlar</h2>`;
             all.slice(0,6).forEach(v=>{
                 html += `
                   <div class="card">
                     <div class="card-title">${v.title}</div>
                     <video class="card-video" controls src="${v.url}"></video>
-                    <div class="stats">${v.views} marta ko‘rilgan</div>
+                    <div class="stats">${v.views} marta ko'rilgan</div>
                   </div>
                 `;
             });
             document.getElementById('content').innerHTML = html;
         }
+
+        // Header ga admin button qo'shish
+        document.querySelector('.header').innerHTML += `<button style="position: absolute; top: 50%; right: 100px; transform: translateY(-50%); background: #ff6b00; color: #fff; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer; font-size: 0.8rem;" onclick="checkAdmin()">Admin</button>`;
 
         showTab('cinema');
     </script>
